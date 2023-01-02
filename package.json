@@ -1,0 +1,19 @@
+{
+  "name": "gartic-whatsappbot",
+  "version": "1.0.0",
+  "description": "Games Gartic.io on whatsapp with waweb.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fzrilsh/Gartic-WhatsappBot.git"
+  },
+  "author": "fzrilsh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fzrilsh/Gartic-WhatsappBot/issues"
+  },
+  "homepage": "https://github.com/fzrilsh/Gartic-WhatsappBot#readme"
+}
