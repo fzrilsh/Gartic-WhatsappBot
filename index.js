@@ -13,13 +13,13 @@ const client = new Client({
 const config = require('./config/config.json');
 
 client.on('qr', async (qr) => {
-    console.log(`[${moment().tz(config.timezone).format('HH:mm:ss')}] Scan QR dibawah ini : `);
+    console.log(`[${moment().tz(config.timezone).format('HH:mm:ss')}] Scan the QR below : `);
     qrcode.generate(qr, { small: true });
 });
 
 client.on('ready', () => {
     console.clear();
-    console.log(`[${moment().tz(config.timezone).format('HH:mm:ss')}] ${config.nama} is Already!`);
+    console.log(`[${moment().tz(config.timezone).format('HH:mm:ss')}] ${config.name} is Already!`);
 });
 
 client.initialize();
