@@ -1,6 +1,6 @@
 {
   "name": "gartic-whatsappbot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Games Gartic.io on whatsapp with waweb.js",
   "main": "index.js",
   "scripts": {

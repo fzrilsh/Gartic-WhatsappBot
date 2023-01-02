@@ -17,6 +17,17 @@ client.on('qr', async (qr) => {
     qrcode.generate(qr, { small: true });
 });
 
+client.on('message', async (message) => {
+    let chatId = message.from;
+    let args = message.body.substring(config.prefix).split(' ');
+    let quoted = await message.getQuotedMessage();
+    switch(args) {
+        case `${config.prefix}help`:
+            client.sendMessage(chatId, 'Hello World');
+        break;
+    }
+});
+
 client.on('ready', () => {
     console.clear();
     console.log(`[${moment().tz(config.timezone).format('HH:mm:ss')}] ${config.name} is Already!`);
