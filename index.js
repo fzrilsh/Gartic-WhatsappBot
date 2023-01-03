@@ -36,8 +36,8 @@ client.on('message', async (message) => {
     // let quoted = await message.getQuotedMessage();
     switch(args[0]) {
         case `${config.prefix}open`:
-            client.sendMessage(chatId, "Opened games. please enter the game by typing /join")
-            new Gartic(client, chatId)
+            let msg = await client.sendMessage(chatId, "Opened games. please enter the game by react this message with any emojis")
+            new Gartic(client, chatId, msg.id)
         break;
     }
 });
