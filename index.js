@@ -18,12 +18,25 @@ client.on('qr', async (qr) => {
     qrcode.generate(qr, { small: true });
 });
 
+client.on('group_join', async (group) => {
+    if(group.id.participant == client.info.wid._serialized){
+        let chat = await group.getChat();
+        for(let participant of chat.participants) {
+            if(participant.id._serialized === client.info.wid._serialized && !participant.isAdmin) {
+                group.reply(`BOT MUST BE AN ADMIN`);
+                break;
+            }
+        }
+    }
+})
+
 client.on('message', async (message) => {
     let chatId = message.from;
     let args = message.body.substring(config.prefix).split(' ');
-    let quoted = await message.getQuotedMessage();
-    switch(args) {
-        case `${config.prefix}join`:
+    // let quoted = await message.getQuotedMessage();
+    switch(args[0]) {
+        case `${config.prefix}open`:
+            client.sendMessage(chatId, "Opened games. please enter the game by typing /join")
             new Gartic(client, chatId)
         break;
     }
