@@ -1,6 +1,7 @@
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 const moment = require('moment-timezone');
+const Gartic = require('./lib/gartic')
 
 const client = new Client({
     restartOnAuthFail: true,
@@ -22,8 +23,8 @@ client.on('message', async (message) => {
     let args = message.body.substring(config.prefix).split(' ');
     let quoted = await message.getQuotedMessage();
     switch(args) {
-        case `${config.prefix}help`:
-            client.sendMessage(chatId, 'Hello World');
+        case `${config.prefix}join`:
+            new Gartic(client, chatId)
         break;
     }
 });
