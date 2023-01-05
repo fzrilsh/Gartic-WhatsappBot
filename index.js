@@ -33,7 +33,6 @@ client.on('group_join', async (group) => {
 client.on('message', async (message) => {
     let chatId = message.from;
     let args = message.body.substring(config.prefix).split(' ');
-    // let quoted = await message.getQuotedMessage();
     switch(args[0]) {
         case `${config.prefix}open`:
             let msg = await client.sendMessage(chatId, "Opened games. please enter the game by react this message with any emojis")
