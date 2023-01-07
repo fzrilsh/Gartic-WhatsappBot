@@ -14,8 +14,8 @@ const client = new Client({
 const config = require('./config/config.json');
 
 client.on('qr', async (qr) => {
-    console.log(`[${moment().tz(config.timezone).format('HH:mm:ss')}] Scan the QR below : `);
     qrcode.generate(qr, { small: true });
+    console.log(`[${moment().tz(config.timezone).format('HH:mm:ss')}] Scan the QR : `);
 });
 
 client.on('group_join', async (group) => {
@@ -33,7 +33,7 @@ client.on('group_join', async (group) => {
 client.on('message', async (message) => {
     let chatId = message.from;
     let args = message.body.substring(config.prefix).split(' ');
-    switch(args[0]) {
+    switch(args[0]) { 
         case `${config.prefix}open`:
             let msg = await client.sendMessage(chatId, "Opened games. please enter the game by react this message with any emojis")
             new Gartic(client, chatId, msg.id)
