@@ -1,0 +1,18 @@
+{
+    "bot_must_admin": "[!] Bot harus menjadi admin untuk memastikan permainan berjalan sesuai peraturan.",
+    "game_started": "[!] Permainan dalam grup ini sedang berjalan.",
+    "game_starting": "[/] :total pemain berpartisipasi, permainan dimulai dalam 5 detik.",
+    "react_message": "[/] Permainan dibuka, silahkan react pesan ini untuk bergabung dengan permainan.",
+    "player_joined": "[+] _@:tag_ telah siap untuk menebak dan menggambar.",
+    "not_enough_player": "[!] Pemain tidak cukup, minimal pemain adalah 4 orang. permainan terpaksa di berhentikan.",
+    "destroy_game": "[!] Permainan berhasil dihentikan.",
+    "not_host": "[!] Kamu bukan host dari game kali ini.",
+    "player_turn": "[/] sekarang giliran _@:tag's_ untuk menggambar.",
+    "choose_object": "[?] Tema kali ini adalah :theme, silahkan pilih objek apa yang ingin kamu gambar :options",
+    "object_choosen": "[!] Kamu telah memilih objek: *:object*\nSekarang silahkan kamu gambar objek *:object* dan kirimkan ke grup.",
+    "guess_drawed": "[?] _@:tag_ telah memilih objek untuk digambar, dia akan mengirimkan hasil gambarnya ke grup ini dan silahkan kalian menebaknya.\nWaktu yang diberikan untuk menjawab hanya 3 menit dari sekarang.",
+    "correct_answer": "[Y] jawaban kamu benar, _@:tag_\nScore +:score",
+    "guess_timeout": "[!] Waktu untuk menebak telah habis, jawabannya adalah *:object*",
+    "guess_timeout_1_minute_left": "[!] Waktu tersisa 1 menit lagi.",
+    "suspected_afk": "[!] Pemain @:tag diduga meninggalkan permainan."
+}
