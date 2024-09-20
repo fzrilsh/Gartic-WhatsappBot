@@ -10,7 +10,7 @@ class Gartic {
     GUESSES = 3
     END = 4
 
-    MIN_PLAYER = 3
+    MIN_PLAYER = 2
 
     /**
      * @param {String} groupid 
@@ -69,6 +69,7 @@ class Gartic {
         console.log(formattedScore)
 
         if(scores) return true
+        else return false
     }
 
     recrutPlayer() {
@@ -105,7 +106,7 @@ class Gartic {
     }
 
     turnDraw() {
-        if(this.checkGameover) return false
+        if(this.checkGameover()) return false
         
         this.theme = randomTheme()
         const id = Date.now().toString(14)
@@ -131,7 +132,7 @@ class Gartic {
                 this.client.sendMessage(this.id, messages.suspected_afk.replace(':tag', this.playerTurn.split('@')[0]), { mentions: [this.playerTurn] })
                 setTimeout(this.turnDraw.bind(this), 5000);
             }
-        }, 15000);
+        }, 30000);
 
         /**
          * @param {import('whatsapp-web.js').Message} message 

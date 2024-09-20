@@ -4,7 +4,7 @@
     "game_starting": "[/] :total pemain berpartisipasi, permainan dimulai dalam 5 detik.",
     "react_message": "[/] Permainan dibuka, silahkan react pesan ini untuk bergabung dengan permainan.",
     "player_joined": "[+] _@:tag_ telah siap untuk menebak dan menggambar.",
-    "not_enough_player": "[!] Pemain tidak cukup, minimal pemain adalah 4 orang. permainan terpaksa di berhentikan.",
+    "not_enough_player": "[!] Pemain tidak cukup, minimal pemain adalah 2 orang. permainan terpaksa di berhentikan.",
     "destroy_game": "[!] Permainan berhasil dihentikan.",
     "not_host": "[!] Kamu bukan host dari game kali ini.",
     "player_turn": "[/] sekarang giliran _@:tag's_ untuk menggambar.",
