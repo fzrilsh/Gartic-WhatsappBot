@@ -200,7 +200,7 @@ class Gartic {
                             clearTimeout(this.caches.timeout[id])
                         }
                     }
-                }else if(stringSimilarity(message.body, this.theme) > 0.6){
+                }else if(stringSimilarity(message.body, this.theme) >= 0.6){
                     message.reply('[!] Jawaban kamu hampir benar!')
                 }
             }
